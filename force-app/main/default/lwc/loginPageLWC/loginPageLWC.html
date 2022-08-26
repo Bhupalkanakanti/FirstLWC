@@ -12,10 +12,10 @@
 <lightning-input label="Enter your Email." onmouseout={CaptureEmail}></lightning-input>
 </div>
 <div class="slds-align_absolute-center">
-<lightning-input label="Create your Password" onmouseout={CreatePassword}></lightning-input>
+<lightning-input label="Create your Password" onmouseout={NewCreatePassword}></lightning-input>
 </div>   
 <div class="slds-align_absolute-center">
-<lightning-button variant="Success" label="Create Account" title="click for Login"></lightning-button>
+<lightning-button variant="Success" label="Create Account" title="click for New"  onclick={DoNewCreation}></lightning-button>
 </div>
 </template>
 <template if:false={SHowtheSignup}>
@@ -26,7 +26,7 @@
 <lightning-input label="Enter the Password" onmouseout={CapturePassword}></lightning-input>
 </div>
 <div class="slds-align_absolute-center">
-<lightning-button variant="Success" label="Login" title="click for Login"></lightning-button>
+<lightning-button variant="Success" label="Login" title="click for Login" onclick={DoLogin}></lightning-button>
 </div>
 </template>
 <div class="slds-align_absolute-center">
