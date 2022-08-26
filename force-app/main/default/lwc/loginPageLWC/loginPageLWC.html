@@ -1,0 +1,36 @@
+
+<template>
+<lightning-card title="Login Form" icon-name="custom:custom33">
+<p slot="footer">This is the Login page to the Bhupal Salesforce Account.</p>
+<lightning-button variant="Brand" label="Sign Up" title="click for Sign Up" slot="actions" onclick={DoSignup}></lightning-button>
+<lightning-button variant="Brand" label="Login" title="click for Sign Up" slot="actions" onclick={DoLogin}></lightning-button>
+<template if:true={SHowtheSignup}>
+<div class="slds-align_absolute-center">
+<lightning-input label="Enter your Mobile number" onmouseout={CaptureMobileNumber}></lightning-input>
+</div>    
+<div class="slds-align_absolute-center">
+<lightning-input label="Enter your Email." onmouseout={CaptureEmail}></lightning-input>
+</div>
+<div class="slds-align_absolute-center">
+<lightning-input label="Create your Password" onmouseout={CreatePassword}></lightning-input>
+</div>   
+<div class="slds-align_absolute-center">
+<lightning-button variant="Success" label="Create Account" title="click for Login"></lightning-button>
+</div>
+</template>
+<template if:false={SHowtheSignup}>
+<div class="slds-align_absolute-center">
+<lightning-input label="Enter the UserName" onmouseout={CaptureUserName}></lightning-input>
+</div>    
+<div class="slds-align_absolute-center">
+<lightning-input label="Enter the Password" onmouseout={CapturePassword}></lightning-input>
+</div>
+<div class="slds-align_absolute-center">
+<lightning-button variant="Success" label="Login" title="click for Login"></lightning-button>
+</div>
+</template>
+<div class="slds-align_absolute-center">
+<lightning-button variant="Brand" label="Cheking" onclick={CHeckingthevalue}></lightning-button>
+</div>
+</lightning-card>
+</template>
