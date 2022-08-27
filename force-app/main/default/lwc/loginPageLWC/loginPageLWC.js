@@ -55,6 +55,12 @@ message:
 this.dispatchEvent(event);
 })
 .catch(error => {});
-}           
+}   
+DOsomehing(){
+CallApex({})
+.then()
+.catch();
+
+}        
 }
 
