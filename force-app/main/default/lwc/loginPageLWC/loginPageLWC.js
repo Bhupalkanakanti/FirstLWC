@@ -44,12 +44,13 @@ CallApex({UName:this.UserName, NewPasscred:this.Password})
 .catch(); 
 }
 DoNewCreation(){
-CallApex({ UName: this.UserName, PWD: this.CaptureCreatePassword, EmailID: this.Email, Mob: this.MobileNumber, NewPasscred: this.Password})
+alert('This is fired');
+CallApex({ UName:this.UserName, Mob:this.MobileNumber, EmailID:this.Email})
 .then(result => {
 const event = new ShowToastEvent({
-title: 'Success!',
-message:  'Your Credentials are Successfully created.',
-variant : 'Success'
+title: 'Get Help',
+message:
+'Salesforce documentation is available in the app. Click ? in the upper-right corner.',
 });
 this.dispatchEvent(event);
 })
