@@ -1,3 +1,9 @@
-import { LightningElement } from 'lwc';
+import { LightningElement,api} from 'lwc';
+import Usrd from '@salesforce/user/Id';
 
-export default class FirstLWC extends LightningElement {}
+export default class firstLWC extends LightningElement {
+ @api recordId;
+ @api objectApiName;
+     Userrr = Usrd;
+      
+    }

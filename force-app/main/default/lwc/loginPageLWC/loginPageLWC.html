@@ -3,37 +3,33 @@
         <p slot="footer">This is the Login page to the Bhupal Salesforce Account.</p>
         <lightning-button variant="Brand" label="Sign Up" title="click for Sign Up" slot="actions" onclick={DoSignup}>
         </lightning-button>
-        <lightning-button variant="Brand" label="Login" title="click for Sign Up" slot="actions" onclick={DoLogin}>
+        <lightning-button variant="Brand" label="Login" title="click for Sign Up" slot="actions" onclick={DoLoginFirst}>
         </lightning-button>
         <template if:true={SHowtheSignup}>
-            <div class="slds-align_absolute-center">
-                <lightning-input label="Enter your Mobile number" onmouseout={CaptureMobileNumber}></lightning-input>
+            <div class="slds-align_absolute-center"> 
+                <lightning-input label="Enter your UserName" onchange={CaptureUserName}></lightning-input>
             </div>
             <div class="slds-align_absolute-center">
-                <lightning-input label="Enter your Email." onmouseout={CaptureEmail}></lightning-input>
+                <lightning-input label="Enter your Email." onchange={CaptureEmail}></lightning-input>
             </div>
             <div class="slds-align_absolute-center">
-                <lightning-input label="Create your Password" onmouseout={NewCreatePassword}></lightning-input>
+                <lightning-input label="Create your Password" onchange={NewCreatePassword}></lightning-input>
             </div>
             <div class="slds-align_absolute-center">
-                <lightning-button variant="Success" label="Create Account" title="click for New"
-                    onclick={DoNewCreation}></lightning-button>
+                <lightning-button variant="Success" label="Create Account" title="click for New" onclick={DoNewCreation}></lightning-button>
             </div>
         </template>
         <template if:false={SHowtheSignup}>
             <div class="slds-align_absolute-center">
-                <lightning-input label="Enter the UserName" onmouseout={CaptureUserName}></lightning-input>
+                <lightning-input label="Enter the UserName" onchange={CaptureUserName1}></lightning-input>
             </div>
             <div class="slds-align_absolute-center">
-                <lightning-input label="Enter the Password" onmouseout={CapturePassword}></lightning-input>
+                <lightning-input label="Enter the Password" onchange={CapturePassword}></lightning-input>
             </div>
             <div class="slds-align_absolute-center">
                 <lightning-button variant="Success" label="Login" title="click for Login" onclick={DoLogin}>
                 </lightning-button>
-            </div>
+            </div>          
         </template>
-        <div class="slds-align_absolute-center">
-            <lightning-button variant="Brand" label="Cheking" onclick={CHeckingthevalue}></lightning-button>
-        </div>
     </lightning-card>
 </template>
