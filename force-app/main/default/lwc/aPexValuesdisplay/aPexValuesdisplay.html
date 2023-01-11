@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="This is the Example of JSON Serialize">
+<lightning-layout>
+    
+</lightning-layout>
+
+
+        <template if:true={IntoHtml}>
+            The Serialized format is {IntoHtml}.
+        </template>
+      <template if:false={IntoHtml}>
+ There is no data for the Showing.
+      </template>
+    </lightning-card>
+</template>

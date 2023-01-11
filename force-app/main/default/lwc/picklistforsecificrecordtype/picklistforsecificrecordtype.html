@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="PickList Value for the Specific RecordTypeId" icon-name="standard:User">
+        <div class="slds-m-around_medium">
+            <template if:true={Picklist.data}>
+                <lightning-combobox name="Industry Picklist Values" label="Industry" value={Picklistvalues}
+                placeholder="Select" options={Picklist.data.values} onchange={handleevent}>
+                
+                </lightning-combobox>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

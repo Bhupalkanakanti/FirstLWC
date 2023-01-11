@@ -1,0 +1,32 @@
+                <template>
+                <lightning-card title="Conditional Rendering for True" icon-name="custom:custom33">
+
+                <lightning-button variant="Brand" label=" Click here to show Hidden text." onclick={CLickedOnbutton}>
+
+                </lightning-button>
+                <template if:true={showtext}>
+                <p> This is the code that is being Hidden from all the Button to the User of the current User.</p>
+
+                </template>
+                </lightning-card>
+                <lightning-card title="Conditional Rendering for False" icon-name="custom:custom34">
+
+                <lightning-button variant="Brand" label=" Click here to Hide text." onclick={CLickedOnbutton1}>
+
+                </lightning-button>
+                <template if:false={hidetext}>
+                <p> Click the above button to hide this line!!!!.</p>
+
+                </template>
+                </lightning-card>
+                <lightning-card title="Toggle rendering" icon-name="custom:custom1">
+
+                <lightning-button variant="Brand" label=" Click here to Hide or show text." onclick={CLickedOnbutton2}>
+
+                </lightning-button>
+                <template if:true={Toggletext}>
+                <p> Click the above button to hide this line!!!!.</p>
+
+                </template>
+                </lightning-card>
+                </template>

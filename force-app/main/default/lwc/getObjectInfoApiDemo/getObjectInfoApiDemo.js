@@ -9,6 +9,7 @@ if(data){
 this.AccountInfoDefaultRecordtypeid = data.defaultRecordTypeId;
 }
 if(error){
+    console.log(error)
 }
 }
 }

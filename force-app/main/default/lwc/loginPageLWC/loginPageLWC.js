@@ -10,30 +10,31 @@ UserName1;
 CaptureCreatePassword;
 Email;
 Password;
-DoSignup(Event){
+DoSignup(){
 this.SHowtheSignup = true;
-};
-DoLoginFirst(event){
+}
+DoLoginFirst(){
 this.SHowtheSignup = false;
-};
+}
 CaptureUserName(event){
 this.UserName = event.detail.value;
-};
+}
 CaptureUserName1(event){
 this.UserName1 = event.detail.value;
-} ;
+} 
 CaptureEmail(event){
 this.Email = event.detail.value;
-} ;
+} 
 CapturePassword(event){
 this.Password = event.detail.value;
-};  
+}
 NewCreatePassword(event){
 this.CaptureCreatePassword = event.detail.value;
-};
-DoNewCreation(event){
+}
+
+DoNewCreation(){
 CallApex({ UName:this.UserName, PWD:this.CaptureCreatePassword, EmailID:this.Email})
-.then(result => {
+.then( ()=> {
 const event = new ShowToastEvent({
 title: 'Success',
 message:
@@ -41,13 +42,15 @@ message:
 variant:'Success',
 });
 this.dispatchEvent(event);
-})
+});
+// eslint-disable-next-line vars-on-top
 var CompoDefinition = {
     componentDef : "c:navigationLwc",
     attributes : {
         FullName : this.UserName,
     }
     };
+    // eslint-disable-next-line vars-on-top
     var encodedComDef = btoa (JSON.stringify(CompoDefinition));
     this[NavigationMixin.Navigate]({
     type:"standard__webPage",
@@ -55,9 +58,9 @@ var CompoDefinition = {
     url : '/one/one.app#' + encodedComDef
     }
     })
-.catch(error => {});
+.catch(() => {});
 }
-DoLogin(event){
+DoLogin(){
 Validatecred({UserNameLog :this.UserName1, PasswordLog :this.Password})
 .then(result => {
     if(result && result.length>0){
@@ -68,13 +71,14 @@ message:
 variant:'Success',
 });
 this.dispatchEvent(event);
-
+    // eslint-disable-next-line vars-on-top
     var CompoDefinition = {
         componentDef : "c:navigationLwc",
         attributes : {
             FullName : this.UserName1,
         }
         };
+        // eslint-disable-next-line vars-on-top
         var encodedComDef = btoa (JSON.stringify(CompoDefinition));
         this[NavigationMixin.Navigate]({
         type:"standard__webPage",

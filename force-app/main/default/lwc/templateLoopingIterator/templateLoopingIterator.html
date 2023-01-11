@@ -1,0 +1,9 @@
+<template>
+<lightning-card>
+<template iterator:ceoist={listofceo}>
+<div key={ceoist.value.id}>
+<a href="#">      <strong> {ceoist.value.Company}  </strong>: {ceoist.value.Name}</a>
+</div>
+</template>
+</lightning-card> 
+</template>

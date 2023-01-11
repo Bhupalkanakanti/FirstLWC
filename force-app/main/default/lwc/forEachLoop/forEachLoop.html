@@ -6,7 +6,27 @@
 </lightning-card>
 <lightning-card title="This Is is the Second ForLoop">
     <template for:each={ProgramList} for:item="Programs" >
-               <p  key={Programs.id}>{Programs.Language} </p>
+               <p  key={Programs.id}> <strong>{Programs.Language} :</strong> {Programs.owner} </p>
+    </template>
+</lightning-card>
+<lightning-card title="This Is is the Third ForLoop ">
+    <template if:true={BhupalList}>
+        <template for:each={BhupalList} for:item="Words" >
+            <p  key={Words}>{Words} </p>
+ </template>
+    </template>
+    <template if:false={BhupalList}>
+        <p>No data is Present in the List.</p>
+    </template>
+</lightning-card>
+<lightning-card title="This is Name List ForLoop ">
+    <template if:true={NameList}>
+        <template for:each={NameList} for:item="Name" >
+            <a href="#" key={Name}>{Name} </a>
+ </template>
+    </template>
+    <template if:false={NameList}>
+        <p>No data is Present in the List.</p>
     </template>
 </lightning-card>
 </template>
