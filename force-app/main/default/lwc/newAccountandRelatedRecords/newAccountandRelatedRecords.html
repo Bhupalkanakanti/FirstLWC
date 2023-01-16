@@ -1,0 +1,60 @@
+<template>
+    <lightning-card title="Account Record with RelatedContact">
+        <lightning-layout>
+            <lightning-layout-item size="2">
+                <lightning-card title=" Account Records">
+                    <template if:true={Accrecords} >
+                        <template for:each={Accrecords} for:item="Record">
+                            <p key={Record.id}> {Record.Name}</p>
+                        </template>
+                    </template>
+                    <template if:false={Accrecords}>
+                   <p>
+                   <strong>
+                    There are No Records in this List.
+                   </strong>
+                   </p>
+                    </template>
+                </lightning-card>
+            </lightning-layout-item>
+            <lightning-layout-item size="5">
+                <lightning-card title="Contact Record ">
+                    <lightning-datatable 
+                        key-field= "id"
+                        data= {ContactsRecords}
+                        columns= {Columns}>
+                        </lightning-datatable> 
+                </lightning-card>
+            </lightning-layout-item>
+            <lightning-layout-item size="5">
+                <lightning-card  title= "Related Contacts">
+                    <table>
+                        <thead>
+                        <tr>
+                        <th> Contact Id </th>
+                        <th> Contact Name </th>
+                        <th> Phone </th>
+                        <th> Email </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <template if:true={ContactsRecords}>
+                                <template for:each={ContactsRecords} for:item="item">
+                                    <tr key={item.Id}>
+                                        <td> {item.Id} </td>  
+                                       <td> {item.LastName} </td>
+                                        <td> {item.Phone} </td>
+                                        <td> {item.Email} </td>
+                                    </tr>
+                                </template>
+                            </template>
+                            <template if:false={ContactsRecords}>
+                                 <p> There is No data to this List</p>
+                            </template>
+                        </tbody>
+                    </table>
+                </lightning-card>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

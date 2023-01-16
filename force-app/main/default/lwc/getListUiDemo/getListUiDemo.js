@@ -12,5 +12,8 @@ Accresult;
            console.log(data)
             this.Accresult = data.records.records;
            }
-           }
+           if(error){
+            console.log(error);
         }
+     }
+ }

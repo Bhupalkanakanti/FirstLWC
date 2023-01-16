@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="All Accounts and related contacts">
+        <lightning-layout>
+            <lightning-layout-item padding="around-small" size="4">
+                   <template if:true = {Recordslist}>
+                    <template for:each= {Recordslist} for:item="Acc" for:index="index">
+                        <p key={Acc.Id} > 
+                        <a href="#" onclick={handleclick} data-accountid={Acc.Id}> {Acc.Name} </a> 
+                        </p>
+                        </template>
+                   </template> 
+                   <template if:false={Recordslist}>
+                    <p> <strong> There are no records of the Account.</strong></p>
+                   </template>
+            </lightning-layout-item>
+    <lightning-layout-item padding="around-small" size="8">
+        <p class="slds-p-horizontal_small">
+            <c-contact-records account-id={accountidfromparent}></c-contact-records>
+            </p>
+    </lightning-layout-item>
+        </lightning-layout> 
+    </lightning-card>  
+</template>

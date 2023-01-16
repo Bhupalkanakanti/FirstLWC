@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="These are the Related contacts list">
+        <template if:true={Conarray}>
+            <lightning-datatable if:true={Conarray}
+            key-field= "id"
+            data= {Conarray}
+            columns= {Columns}>
+            </lightning-datatable>
+        </template>
+       <template if:false={Conarray}>
+       <p>There is no Data in the Contact List.</p>
+       </template>
+    </lightning-card>
+</template>
