@@ -1,5 +1,24 @@
 <template>
-    <lightning-card title="getObjectInfoDemo">
-<p>    RecordTypeid : <strong> {AccountInfoDefaultRecordtypeid}</strong>     </p>
+    <lightning-card title="getObjectInfoDemo for Relationshios">
+        <table>
+            <thead>
+                <tr>
+                    <th> Child Object Api Name </th>
+                    <th> fieldName </th>
+                    <th> relationshipName </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template if:true={AccountInfoDefaultRecordtypeid}>
+                    <template for:each={AccountInfoDefaultRecordtypeid} for:item="Rec">
+                        <tr key={Rec}>
+                            <td>{Rec.childObjectApiName} </td>
+                            <td>{Rec.fieldName}</td>
+                            <td>{Rec.relationshipName}</td>
+                        </tr>
+                    </template>
+                </template>
+            </tbody>
+        </table>
     </lightning-card>
 </template>

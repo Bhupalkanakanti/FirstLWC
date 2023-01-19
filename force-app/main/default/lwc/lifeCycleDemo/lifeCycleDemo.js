@@ -15,7 +15,7 @@ export default class LifeCycleDemo extends LightningElement {
     }
     handletemplate1() {
         console.log('This is in the Handle Change method');
-        if(this.tempNo == 'temp1') {
+        if (this.tempNo == 'temp1') {
             this.tempNo = 'temp2';
         }
         else {
@@ -24,9 +24,9 @@ export default class LifeCycleDemo extends LightningElement {
     }
     render() {
         console.log('Inside the Rendering Phase');
-        if (this.tempNo === 'temp1') 
+        if (this.tempNo === 'temp1')
             return firsttemplate;
-        
+
         else return secondtemplate;
     }
 }
