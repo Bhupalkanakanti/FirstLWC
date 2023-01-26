@@ -26,6 +26,7 @@ export default class AccountContactTable extends LightningElement {
     }
  
     get isDisable(){
+        // eslint-disable-next-line eqeqeq
         return (this.isLoading || (this.wiredRecords.data.length == 0 && this.records.length == 0));
     }
  
@@ -36,6 +37,7 @@ export default class AccountContactTable extends LightningElement {
  
     //update table row values in list
     updateValues(event){
+        // eslint-disable-next-line eqeqeq
         var foundelement = this.records.find(ele => ele.Id == event.target.dataset.id);
         if(event.target.name === 'FirstName'){
             foundelement.FirstName = event.target.value;
@@ -110,7 +112,9 @@ export default class AccountContactTable extends LightningElement {
     }
  
     updateRecordView() {
+       // eslint-disable-next-line @lwc/lwc/no-async-operation
        setTimeout(() => {
+        // eslint-disable-next-line no-eval
         eval("$A.get('e.force:refreshView').fire();");
    }, 1000);
     }

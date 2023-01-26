@@ -1,6 +1,6 @@
 <template>
     <lightning-card title="Contact Records Dynamically">
-        <template if:true={towardsComp}>
+        <template if:true={Templatecond}>
             <table>
                 <thead>
                     <tr>
@@ -12,28 +12,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <template if:true={towardsComp}>
-                        <template for:each={towardsComp} for:item="item">
-                            <tr key={item.Id}>
-                                <td>{item.Id}</td>
-                                <td>{item.Name}</td>
-                                <td>{item.Phone}</td>
-                                <td>{item.Email}</td>
-                                <td>
-                                    <lightning-button label="Delete" variant="Success" value={item.Id}
-                                        onclick={handleDelete}>
-                                    </lightning-button>
-                                </td>
-                            </tr>
-                        </template>
-                    </template>
-                    <template if:false={towardsComp}>
-                        <p>
-                            <strong> Woohh!! ... There are no related records for this Record. </strong>
-                        </p>
+                    <template for:each={towardsComp} for:item="item">
+                        <tr key={item.Id}>
+                            <td>{item.Id}</td>
+                            <td>{item.Name}</td>
+                            <td>{item.Phone}</td>
+                            <td>{item.Email}</td>
+                            <td>
+                                <lightning-button label="Delete" variant="Success" value={item.Id}
+                                    onclick={handleDelete}>
+                                </lightning-button>
+                            </td>
+                        </tr>
                     </template>
                 </tbody>
             </table>
+        </template>
+        <template if:false={Templatecond}>
+            <p>
+               &nbsp;  &nbsp;   <strong> Woohh!! ... There are no related records for this Record. </strong>
+            </p>
         </template>
     </lightning-card>
 </template>
