@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Contact Records Dynamically">
+<p> <strong> Object Api Name of the record = {objectApiName}</strong></p>
+
+        <template if:true={towardsComp}>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Contact Id </th>
+                        <th> Contact Name </th>
+                        <th> Phone </th>
+                        <th> Email </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template if:true={towardsComp}>
+                        <template for:each={towardsComp} for:item="item">
+                            <tr key={item.Id}>
+                                <td>{item.Id}</td>
+                                <td>{item.Name}</td>
+                                <td>{item.Phone}</td>
+                                <td>{item.Email}</td>
+                            </tr>
+                        </template>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+    </lightning-card>
+</template>

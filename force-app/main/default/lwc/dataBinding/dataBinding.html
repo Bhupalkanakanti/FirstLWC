@@ -1,11 +1,10 @@
 <template>
-<lightning-card  title="One way Data Bindng Demo">
-
-<h1> My Name is {FullName} </h1>
-</lightning-card>
-<lightning-card  title="Two way Data NewTitle Demo">
-<lightning-input type="text" name="title" label="Enter your Title" value={title} onkeyup={Handlechange}></lightning-input>
-
-<h1>The new Value is {title}.</h1>
-</lightning-card>
+    <lightning-card title="One way Data Bindng Demo">
+        <h1> My Name is {FullName} </h1>
+    </lightning-card>
+    <lightning-card title="Two way Data NewTitle Demo">
+        <lightning-input type="text" name="title" label="Enter your Title" value={title}
+            onkeyup={Handlechange}></lightning-input>
+        <h1>The new Value is {title}.</h1>
+    </lightning-card>
 </template>
