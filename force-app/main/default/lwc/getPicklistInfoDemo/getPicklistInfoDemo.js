@@ -4,7 +4,7 @@ import AccountObject from '@salesforce/schema/Account';
 export default class GetPicklistInfoDemo extends LightningElement {
     AccountInfoDefaultRecordtypeid
 @api objectApiName;
-    @wire(getObjectInfo, { objectApiName: AccountObject })
+    @wire(getObjectInfo, { objectApiName: '$objectApiName' })
     ObjInfo({ data, error }) {
         if (data) {
             console.log(data);

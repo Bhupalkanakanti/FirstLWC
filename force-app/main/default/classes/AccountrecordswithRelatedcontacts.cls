@@ -6,11 +6,7 @@ public static List<Account> AccountrecordswithRelatedcontactsMethod() {
 }
 
 @auraEnabled(cacheable =true)
-public static List<contact> ContactrecordsMethod(string AccountIdfromcmp ,String obj ){
-    string query = 'select name ';
-    query=query + ' from ' + obj ;
-    query = query +'where ' +
-    query = 
+public static List<contact> ContactrecordsMethod(string AccountIdfromcmp ){
     List<Contact> Conlist = [select id, LastName,Name, Phone, Email, AccountId From Contact where Accountid = : AccountIdfromcmp ];
     return Conlist;
 }

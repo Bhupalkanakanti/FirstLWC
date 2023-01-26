@@ -1,7 +1,5 @@
 <template>
     <lightning-card title="Contact Records Dynamically">
-<p> <strong> Object Api Name of the record = {objectApiName}</strong></p>
-
         <template if:true={towardsComp}>
             <table>
                 <thead>
@@ -10,6 +8,7 @@
                         <th> Contact Name </th>
                         <th> Phone </th>
                         <th> Email </th>
+                        <th> Delete </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -20,8 +19,18 @@
                                 <td>{item.Name}</td>
                                 <td>{item.Phone}</td>
                                 <td>{item.Email}</td>
+                                <td>
+                                    <lightning-button label="Delete" variant="Success" value={item.Id}
+                                        onclick={handleDelete}>
+                                    </lightning-button>
+                                </td>
                             </tr>
                         </template>
+                    </template>
+                    <template if:false={towardsComp}>
+                        <p>
+                            <strong> Woohh!! ... There are no related records for this Record. </strong>
+                        </p>
                     </template>
                 </tbody>
             </table>
