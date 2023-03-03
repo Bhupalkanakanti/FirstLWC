@@ -75,7 +75,6 @@ export default class AccountContactTable extends LightningElement {
             this.showToast('Error updating or refreshing records', error.body.message, 'Error', 'dismissable');
         });
     }
- 
     //remove records from table
     handleDeleteAction(event){
         if(isNaN(event.target.dataset.id)){

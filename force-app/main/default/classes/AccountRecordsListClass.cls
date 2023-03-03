@@ -2,7 +2,7 @@ public with sharing class AccountRecordsListClass {
     @AuraEnabled (cacheable=true)
   
     public Static List<Account> AccountRecordsListClassMethod() {
-        List<Account> Acclist = [ Select Id, Name from Account  Limit 10] ;
+        List<Account> Acclist = [ Select Id, Name,Phone,AnnualRevenue from Account ] ;
     return Acclist;
     }
 }

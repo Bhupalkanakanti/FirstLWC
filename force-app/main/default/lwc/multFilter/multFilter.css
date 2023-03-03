@@ -1,0 +1,46 @@
+/*.slds-modal__container{
+    width: 70% !important;
+    max-width: 70% !important;
+}
+.modal-dialog {
+        width:60%;
+        height:60%;
+        margin:0 auto;
+}
+.modal{
+    height:100%;
+    width:50%;
+    margin: 0 auto;
+}
+.modal-dialog{
+    overflow:hidden;
+     max-height:96%;
+}
+
+.slds-modal__container{ 
+    height : auto; width: 80%; max-width: 70vh; 
+  } 
+  .modal-body{ 
+    height : 40vh !important; 
+    max-height: 40vh !important; 
+  } 
+  .slds-modal__footer{ 
+    display: inline !important; 
+  }
+  .slds-modal__content{
+    height: 500px;
+}*/
+.slds-modal__content {
+    height: 30rem !important;
+}
+.slds-modal__header {
+    text-align: initial;
+}
+.button_Css{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.buttoncss{
+  padding: 1px 50px;
+}
