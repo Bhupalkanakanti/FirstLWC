@@ -30,7 +30,7 @@ export default class DynamicDisplayofChildRecords extends LightningElement {
     deleteRecord(event.target.value)
       // eslint-disable-next-line no-unused-vars
       .then((result) => {
-        return refreshApex(this.Refreshtheable);
+         refreshApex(this.Refreshtheable);
         // window.location.reload();
       })
       .catch((error) => {
@@ -38,10 +38,12 @@ export default class DynamicDisplayofChildRecords extends LightningElement {
       });
   }
   updateRecordView() {
+
     // eslint-disable-next-line @lwc/lwc/no-async-operation
     setTimeout(() => {
       // eslint-disable-next-line no-eval
       eval("$A.get('e.force:refreshView').fire();");
     }, 1000);
+    refreshApex(this.Refreshtheable);
   }
 }
