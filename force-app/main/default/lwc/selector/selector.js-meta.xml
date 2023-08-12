@@ -5,8 +5,16 @@
 	<masterLabel>User Info</masterLabel>
 	<description>User fetch info in LWC demo</description>
 	<targets>
-		<target>lightning__RecordPage</target>
 		<target>lightning__AppPage</target>
+		<target>lightning__RecordPage</target>
 		<target>lightning__HomePage</target>
 	</targets>
+	<targetConfigs>
+		<targetConfig targets="lightning__RecordPage,lightning__HomePage,lightning__AppPage">
+			<property name="first" type="String" default="Bhupal" label="Enter the Name"/>
+			<property name="imagedecision" type="Boolean" default="false" label= "Image?"/>
+			<property name="title" type="String" default="This is the Selector page" label="Enter the Page title"/>
+			<property name="imageUrl" type="String" default="" label="Give the image URL" />
+		</targetConfig>
+	</targetConfigs>
 </LightningComponentBundle>
