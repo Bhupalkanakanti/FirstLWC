@@ -1,5 +1,5 @@
 <template>
-    <lightning-card title="Contact Records Dynamically">
+    <lightning-card title="Contact Records Dynamically" icon-name="utility:automate">
         <template if:true={Templatecond}>
             <table>
                 <thead>
@@ -30,7 +30,7 @@
         </template>
         <template if:false={Templatecond}>
             <p>
-               &nbsp;  &nbsp;   <strong> Woohh!! ... There are no related records for this Record. </strong>
+                &nbsp; &nbsp; <strong> Woohh!! ... There are no related records for this Record. </strong>
             </p>
         </template>
     </lightning-card>

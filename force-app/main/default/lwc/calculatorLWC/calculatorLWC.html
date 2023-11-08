@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Calculator" icon-name="custom:custom33">
+        <lightning-input label="Number 1" onchange={FirstNumber}>
+        </lightning-input>
+        <lightning-input label="Number 2" onchange={SecondNumber}>
+        </lightning-input>
+        <lightning-button label="Sum it!" onclick={SumofNumbers}>
+        </lightning-button>
+        <lightning-input label="Result" value={result} read-only="true">
+        </lightning-input>
+    </lightning-card>
+</template>
